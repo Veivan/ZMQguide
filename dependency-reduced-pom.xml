@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>guide.tasksink</mainClass>
+                  <mainClass>guide.syncsub</mainClass>
                 </transformer>
               </transformers>
             </configuration>

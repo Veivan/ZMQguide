@@ -40,7 +40,7 @@ public class mspoller
                 System.out.println("Process weather update");
             }
         }
-        items.close();
+        //items.close();
         receiver.close();
         context.term();
     }
