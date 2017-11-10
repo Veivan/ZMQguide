@@ -179,7 +179,7 @@ public class lbbroker
                 backend.send(request);
 
             }
-            items.close();
+            //items.close();
         }
 
         frontend.close();
