@@ -1,4 +1,4 @@
-package guide;
+package majordomo;
 
 import java.util.Formatter;
 
@@ -125,7 +125,7 @@ public class mdcliapi
                 log.format("W: no reply, reconnecting\n");
                 reconnectToBroker();
             }
-            items.close();
+            //items.close();
         }
         request.destroy();
         return reply;

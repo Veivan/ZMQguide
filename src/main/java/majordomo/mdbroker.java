@@ -1,4 +1,4 @@
-package guide;
+package majordomo;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -143,7 +143,7 @@ public class mdbroker
                 header.destroy();
 
             }
-            items.close();
+            //items.close();
             purgeWorkers();
             sendHeartbeats();
         }

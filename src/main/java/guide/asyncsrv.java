@@ -29,7 +29,7 @@ public class asyncsrv
     private static class client_task implements Runnable
     {
 
-        @Override
+       // @Override
         public void run()
         {
             ZContext ctx = new ZContext();
@@ -68,7 +68,7 @@ public class asyncsrv
 
     private static class server_task implements Runnable
     {
-        @Override
+        //@Override
         public void run()
         {
             ZContext ctx = new ZContext();
@@ -104,7 +104,7 @@ public class asyncsrv
             this.ctx = ctx;
         }
 
-        @Override
+        //@Override
         public void run()
         {
             Socket worker = ctx.createSocket(ZMQ.DEALER);

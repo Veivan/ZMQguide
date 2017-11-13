@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>guide.psenvpub</mainClass>
+                  <mainClass>guide.tripping</mainClass>
                 </transformer>
               </transformers>
             </configuration>

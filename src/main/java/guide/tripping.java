@@ -15,7 +15,7 @@ public class tripping
 
     static class Broker implements Runnable
     {
-        @Override
+        //@Override
         public void run()
         {
             ZContext ctx = new ZContext();
@@ -52,7 +52,7 @@ public class tripping
                     msg.addFirst(new ZFrame("C"));
                     msg.send(frontend);
                 }
-                items.close();
+               // items.close();
             }
             ctx.close();
         }
@@ -62,7 +62,7 @@ public class tripping
     static class Worker implements Runnable
     {
 
-        @Override
+        //@Override
         public void run()
         {
             ZContext ctx = new ZContext();
@@ -85,7 +85,7 @@ public class tripping
     {
         private static int SAMPLE_SIZE = 10000;
 
-        @Override
+        //@Override
         public void run()
         {
             ZContext ctx = new ZContext();

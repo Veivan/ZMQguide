@@ -1,4 +1,4 @@
-package guide;
+package majordomo;
 
 import java.util.Formatter;
 
@@ -90,7 +90,7 @@ public class mdcliapi2
 
             reply = msg;
         }
-        items.close();
+        //items.close();
         return reply;
     }
 
