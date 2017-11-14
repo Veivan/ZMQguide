@@ -1,4 +1,4 @@
-package guide;
+package majordomo;
 
 //  Titanic client example
 //  Implements client side of http://rfc.zeromq.org/spec:9

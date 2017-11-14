@@ -1,4 +1,4 @@
-package guide;
+package majordomo;
 
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
@@ -56,7 +56,7 @@ public class titanic
     static class TitanicRequest implements IAttachedRunnable
     {
 
-        @Override
+        //@Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             mdwrkapi worker = new mdwrkapi("tcp://localhost:5555", "titanic.request", false);
@@ -114,8 +114,7 @@ public class titanic
 
     static class TitanicReply implements IDetachedRunnable
     {
-
-        @Override
+        //@Override
         public void run(Object[] args)
         {
             mdwrkapi worker = new mdwrkapi("tcp://localhost:5555", "titanic.reply", false);
@@ -167,7 +166,7 @@ public class titanic
     //  once in a row:
     static class TitanicClose implements IDetachedRunnable
     {
-        @Override
+        //@Override
         public void run(Object[] args)
         {
             mdwrkapi worker = new mdwrkapi("tcp://localhost:5555", "titanic.close", false);
