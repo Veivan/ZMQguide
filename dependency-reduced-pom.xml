@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>majordomo.mmiecho</mainClass>
+                  <mainClass>freelance.flclient2</mainClass>
                 </transformer>
               </transformers>
             </configuration>

@@ -20,7 +20,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>majordomo.mmiecho</mainClass>
+									<mainClass>freelance.flclient2</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

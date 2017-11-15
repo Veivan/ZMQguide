@@ -1,4 +1,4 @@
-package guide;
+package freelance;
 
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -34,7 +34,7 @@ public class flclient1
 
         //  Close socket in any case, we're done with it now
         ctx.destroySocket(client);
-        poller.close();
+        //poller.close();
         return reply;
     }
     //  .split client task

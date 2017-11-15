@@ -1,4 +1,4 @@
-package guide;
+package freelance;
 
 import org.zeromq.ZContext;
 import org.zeromq.ZFrame;

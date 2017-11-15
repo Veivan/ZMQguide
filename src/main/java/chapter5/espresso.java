@@ -1,4 +1,4 @@
-package guide;
+package chapter5;
 
 import java.util.Random;
 
@@ -18,7 +18,7 @@ public class espresso
     private static class Subscriber implements IAttachedRunnable
     {
 
-        @Override
+       // @Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             //  Subscribe to "A" and "B"
@@ -42,7 +42,7 @@ public class espresso
     //  The publisher sends random messages starting with A-J:
     private static class Publisher implements IAttachedRunnable
     {
-        @Override
+        //@Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             Socket publisher = ctx.createSocket(ZMQ.PUB);
@@ -69,7 +69,7 @@ public class espresso
     //  attached child threads. In other languages your mileage may vary:
     private static class Listener implements IAttachedRunnable
     {
-        @Override
+//        @Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             //  Print everything that arrives on pipe

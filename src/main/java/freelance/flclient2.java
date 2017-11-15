@@ -1,4 +1,4 @@
-package guide;
+package freelance;
 
 import org.zeromq.ZContext;
 import org.zeromq.ZMQ;
@@ -74,7 +74,7 @@ public class flclient2
                 reply.destroy();
             }
         }
-        poller.close();
+        //poller.close();
         request.destroy();
         return reply;
 
