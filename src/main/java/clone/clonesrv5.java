@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -30,7 +30,7 @@ public class clonesrv5
     //  with a KTHXBAI message:
     private static class Snapshots implements IZLoopHandler
     {
-        @Override
+        //@Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv5 srv = (clonesrv5) arg;
@@ -71,7 +71,7 @@ public class clonesrv5
     //  time-to-live. We publish updates immediately on our publisher socket:
     private static class Collector implements IZLoopHandler
     {
-        @Override
+        //@Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv5 srv = (clonesrv5) arg;
@@ -94,7 +94,7 @@ public class clonesrv5
 
     private static class FlushTTL implements IZLoopHandler
     {
-        @Override
+        //@Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv5 srv = (clonesrv5) arg;

@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.nio.ByteBuffer;
 import java.util.Iterator;
@@ -61,7 +61,7 @@ public class clonesrv2
     {
         private static Map<String, kvsimple> kvMap = new LinkedHashMap<String, kvsimple>();
 
-        @Override
+        //@Override
         public void run(Object[] args, ZContext ctx, Socket pipe)
         {
             pipe.send("READY"); // optional

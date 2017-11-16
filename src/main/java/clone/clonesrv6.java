@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,6 +13,8 @@ import org.zeromq.ZLoop.IZLoopHandler;
 import org.zeromq.ZMQ;
 import org.zeromq.ZMQ.PollItem;
 import org.zeromq.ZMQ.Socket;
+
+import chapter4.bstar;
 
 //  Clone server - Model Six
 public class clonesrv6
@@ -33,7 +35,6 @@ public class clonesrv6
 
     private static class Snapshots implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -71,7 +72,6 @@ public class clonesrv6
 
     private static class Collector implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -107,7 +107,6 @@ public class clonesrv6
     //  server, which will become active:
     private static class SendHugz implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -124,7 +123,6 @@ public class clonesrv6
 
     private static class FlushTTL implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -143,7 +141,6 @@ public class clonesrv6
     //  and grab a new snapshot from the active server:
     private static class NewActive implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -169,7 +166,6 @@ public class clonesrv6
 
     private static class NewPassive implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;
@@ -193,7 +189,6 @@ public class clonesrv6
     //  add our update to our kvmap. We're always passive in this case:
     private static class Subscriber implements IZLoopHandler
     {
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             clonesrv6 srv = (clonesrv6) arg;

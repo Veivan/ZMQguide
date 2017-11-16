@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.util.HashMap;
 import java.util.Map;

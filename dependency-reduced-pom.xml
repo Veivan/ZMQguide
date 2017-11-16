@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>freelance.flclient2</mainClass>
+                  <mainClass>clone.kvmsg</mainClass>
                 </transformer>
               </transformers>
             </configuration>

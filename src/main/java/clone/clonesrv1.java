@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.nio.ByteBuffer;
 import java.util.Random;

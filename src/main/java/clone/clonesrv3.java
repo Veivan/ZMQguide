@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -11,9 +11,11 @@ import org.zeromq.ZMQ.Poller;
 import org.zeromq.ZMQ.Socket;
 
 /**
- * Clone server Model Four
+ * Clone server Model Three
+ * @author Danish Shrestha <dshrestha06@gmail.com>
+ *
  */
-public class clonesrv4
+public class clonesrv3
 {
     private static Map<String, kvsimple> kvMap = new LinkedHashMap<String, kvsimple>();
 
@@ -47,7 +49,7 @@ public class clonesrv4
                     break;
                 kvMsg.setSequence(++sequence);
                 kvMsg.send(publisher);
-                clonesrv4.kvMap.put(kvMsg.getKey(), kvMsg);
+                clonesrv3.kvMap.put(kvMsg.getKey(), kvMsg);
                 System.out.printf("I: publishing update %5d\n", sequence);
             }
 
@@ -56,9 +58,6 @@ public class clonesrv4
                 byte[] identity = snapshot.recv(0);
                 if (identity == null)
                     break; //  Interrupted
-
-                //  .until
-                //  Request is in second frame of message
                 String request = snapshot.recvStr();
 
                 if (!request.equals("ICANHAZ?")) {
@@ -66,14 +65,12 @@ public class clonesrv4
                     break;
                 }
 
-                String subtree = snapshot.recvStr();
-
                 Iterator<Entry<String, kvsimple>> iter = kvMap.entrySet().iterator();
                 while (iter.hasNext()) {
                     Entry<String, kvsimple> entry = iter.next();
                     kvsimple msg = entry.getValue();
                     System.out.println("Sending message " + entry.getValue().getSequence());
-                    this.sendMessage(msg, identity, subtree, snapshot);
+                    this.sendMessage(msg, identity, snapshot);
                 }
 
                 // now send end message with getSequence number
@@ -87,15 +84,14 @@ public class clonesrv4
         ctx.close();
     }
 
-    private void sendMessage(kvsimple msg, byte[] identity, String subtree, Socket snapshot)
+    private void sendMessage(kvsimple msg, byte[] identity, Socket snapshot)
     {
         snapshot.send(identity, ZMQ.SNDMORE);
-        snapshot.send(subtree, ZMQ.SNDMORE);
         msg.send(snapshot);
     }
 
     public static void main(String[] args)
     {
-        new clonesrv4().run();
+        new clonesrv3().run();
     }
 }

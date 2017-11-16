@@ -1,4 +1,4 @@
-package guide;
+package chapter4;
 
 import org.zeromq.ZContext;
 import org.zeromq.ZLoop;
@@ -164,7 +164,6 @@ public class bstar
     private static IZLoopHandler SendState = new IZLoopHandler()
     {
 
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;
@@ -176,8 +175,6 @@ public class bstar
     //  Receive state from peer, execute finite state machine
     private static IZLoopHandler RecvState = new IZLoopHandler()
     {
-
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;
@@ -193,8 +190,6 @@ public class bstar
     //  Application wants to speak to us, see if it's possible
     private static IZLoopHandler VoterReady = new IZLoopHandler()
     {
-
-        @Override
         public int handle(ZLoop loop, PollItem item, Object arg)
         {
             bstar self = (bstar) arg;

@@ -1,4 +1,4 @@
-package guide;
+package clone;
 
 import java.nio.ByteBuffer;
 import java.util.HashMap;
@@ -346,7 +346,7 @@ public class kvmsg
         kvmsg.send(output);
         kvmsg.store(kvmap);
 
-        kvmsg = guide.kvmsg.recv(input);
+        kvmsg = kvmsg.recv(input);
         if (verbose)
             kvmsg.dump();
         assert (kvmsg.getKey().equals("getKey"));
@@ -366,7 +366,7 @@ public class kvmsg
         kvmsg.send(output);
         kvmsg.destroy();
 
-        kvmsg = guide.kvmsg.recv(input);
+        kvmsg = kvmsg.recv(input);
         if (verbose)
             kvmsg.dump();
         assert (kvmsg.key.equals("getKey"));
