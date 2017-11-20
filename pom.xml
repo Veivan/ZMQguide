@@ -20,7 +20,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>clone.kvmsg</mainClass>
+									<mainClass>cli.inputcli</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
@@ -36,7 +36,15 @@
 			<artifactId>jeromq</artifactId>
 			<version>0.4.2</version>
 		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc -->
+		<dependency>
+		    <groupId>org.xerial</groupId>
+		    <artifactId>sqlite-jdbc</artifactId>
+		    <version>3.16.1</version>
+		</dependency>
 	</dependencies>
+	
 	<properties>
 		<exec.mainClass>guide.hwserver</exec.mainClass>
 	</properties>
